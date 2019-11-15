@@ -6,11 +6,9 @@
 trigger:
 - master
 
-- job: Windows
-  pool:
+pool:
     vmImage: 'windows-latest'
-  steps:
-  - script: echo hello from Windows
+
 
 steps:
 - script: echo Hello, world!
