@@ -13,6 +13,11 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+- task: DotNetCoreCLI@2
+  displayName: Build
+  inputs:
+    command: build
+    projects: '**/*.conf.js'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
